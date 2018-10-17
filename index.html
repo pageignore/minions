@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>小黄人</title>
+<style type="text/css">
+*{padding: 0 ; margin: 0;}
+.main{width: 510px; height: 750px; border: 1px solid #555; margin: 0 auto; position: relative;}
+.name{position: absolute; right:20px; bottom: 50px; transform:rotate(-20deg);}
+.name:after{content: " "; width: 100%; height: 20px; border-top: 1px solid #160305; border-radius: 50% 50% 0 0; position: absolute; bottom: -20px; left: 0;}
+.hair01{width: 40px; height: 40px; border-right: 2px solid #160305; border-radius: 0 30% 10% 0/0 50% 50% 0; position:  absolute; top: 46px; left: 150px; transform:rotate(-20deg);}
+.hair03{width: 40px; height: 40px; border-right: 2px solid #160305; border-radius: 0 30% 10% 0/0 50% 50% 0; position:  absolute; top: 46px; left: 156px; transform:rotate(-20deg);}
+.hair02{width: 60px; height: 60px; border-right: 2px solid #160305; border-radius: 0 30% 10% 0/0 50% 50% 0; position:  absolute; top: 45px; left: 156px; transform:rotate(-30deg);}
+.hair04{width: 40px; height: 40px; border-right: 2px solid #160305; border-radius: 0 30% 10% 0/0 50% 50% 0; position:  absolute; top: 56px; left: 130px; transform:rotate(-20deg);}
+.hair05{width: 40px; height: 40px; border-right: 2px solid #160305; border-radius: 0 30% 10% 0/0 50% 50% 0; position:  absolute; top: 98px; left: 100px; transform:rotate(-36deg);}
+.hair06{width: 40px; height: 50px; border-right: 2px solid #160305; border-radius: 0 30% 10% 0/0 50% 50% 0; position:  absolute; top: 22px; left: 198px; transform:rotate(-10deg);}
+.hair07{width: 40px; height: 30px; border-right: 2px solid #160305; border-radius: 0 30% 10% 0/0 50% 50% 0; position:  absolute; top: 44px; left: 203px; transform:rotate(-10deg);}
+.hair08{width: 40px; height: 40px; border-right: 2px solid #160305; border-radius: 0 30% 10% 0/0 50% 50% 0; position:  absolute; top: 35px; left: 230px; transform:rotate(-10deg);}
+.hair09{width: 40px; height: 40px; border-right: 2px solid #160305; border-radius: 0 30% 10% 0/0 50% 50% 0; position:  absolute; top: 28px; left: 238px; transform:rotate(-10deg);}
+.hair10{width: 40px; height: 40px; border-left: 2px solid #160305; border-radius: 30% 0 0 10%/50% 0 0 50%; position:  absolute; top: 48px; left: 300px; transform:rotate(20deg);}
+.hair11{width: 40px; height: 40px; border-left: 2px solid #160305; border-radius: 30% 0 0 10%/50% 0 0 50%; position:  absolute; top: 38px; left: 320px; transform:rotate(14deg);}
+.hair12{width: 40px; height: 50px; border-left: 2px solid #160305; border-radius: 30% 0 0 10%/50% 0 0 50%; position:  absolute; top: 33px; left: 338px; transform:rotate(24deg);}
+.hair13{width: 40px; height: 40px; border-left: 2px solid #160305; border-radius: 30% 0 0 10%/50% 0 0 50%; position:  absolute; top: 63px; left: 356px; transform:rotate(24deg);}
+.hair14{width: 40px; height: 40px; border-left: 2px solid #160305; border-radius: 30% 0 0 10%/50% 0 0 50%; position:  absolute; top: 78px; left: 370px; transform:rotate(24deg);}
+.hair15{width: 40px; height: 40px; border-left: 2px solid #160305; border-radius: 30% 0 0 10%/50% 0 0 50%; position:  absolute; top: 78px; left: 377px; transform:rotate(24deg);}
+.hair16{width: 40px; height: 40px; border-left: 2px solid #160305; border-radius: 30% 0 0 10%/50% 0 0 50%; position:  absolute; top: 78px; left: 382px; transform:rotate(34deg);}
+.hair17{width: 40px; height: 40px; border-left: 2px solid #160305; border-radius: 30% 0 0 10%/50% 0 0 50%; position:  absolute; top: 121px; left: 400px; transform:rotate(44deg);}
+.body{width: 335px;height: 505px; border: 1px solid #1e1516; background: #edb15b; position: absolute; top: 58px; left: 92px; transform:skew(-2deg); border-radius: 50% 50% 0 0/150px 150px 0 0;}
+.frame_left{width: 70px; height: 100px; border-top: 40px solid #1a1a1a; position: absolute; border-radius: 58px 0 0 0/85px 0 0 0; top:154px; left: 93px; transform:skew(16deg);}
+.frame_right_top{ width: 52px; height: 40px; border-top: 30px solid #1a1a1a; border-radius: 0 40px 0 0/0 38px 0 0;  position: absolute; top:180px; left: 382px; transform:skew(-20deg) rotate(10deg);}
+.frame_right_bottom{width: 50px; height: 20px; border-top: 20px solid #1a1a1a; border-radius: 0 30px 0 0/0 30px 0 0; position: absolute;top: 196px; left: 390px; transform:skew(-20deg) rotate(16deg);}
+.left_outline{width: 147px; height: 147px; border: 1px solid #160305; border-radius: 50%; position: absolute; top: 99px; left: 129px;}
+.eye_left{width: 103px; height: 103px; border: 22px solid #958f8f; border-radius: 50%; }
+.right_outline{width: 147px; height: 147px; border: 1px solid #160305; border-radius: 50%; position: absolute; top: 111px; left: 255px;}
+.eye_right{width: 103px; height: 103px; border: 22px solid #958f8f; border-radius: 50%;}
+.inline{width: 102px; height: 102px; border: 1px solid #160305; border-radius: 50%;}
+.eye_frame_shade{width: 20px; height: 75px; background: #958f8f; position: absolute; top: 142px; left: 256px; transform:skew(-8deg);}
+.eye_frame_shade2{width: 5px; height: 15px; background: #958f8f; position:absolute; top: 160px; left: 256px; }
+.eye_white{width: 101px; height: 80px; border: 1px solid #160305; background: #fbf2e9; border-radius: 50%; position: absolute; top: 50%; margin-top:-42px;}
+.eyeball{width: 42px; height: 42px; background: #74261c; border-radius: 50%; border:1px solid #160305; position: absolute; left: 50%; top: 50%; margin-left: -21px; margin-top: -15px;}
+.eyeball:after{content: " "; width: 20px; height: 20px; background: #211614; position: absolute; top: 50%; left: 50%; margin-top: -10px; margin-left: -10px; border-radius: 50%;}
+.side{width: 30px; height: 270px; border-left: 1px solid #160305; background: #fff;border-radius: 14px 50% 0 5px/50% 50% 0 50%; position: absolute; top: 225px; left: 420px;}
+.side:after{content: " "; width:4px ;height: 4px; background: #1a1a1a; border-radius: 0 0 5px 0/0 0 5px 0; transform:rotate(1deg); position: absolute;left: 9px;}
+.mouth{width: 172px; height: 64px; background: #73322c; position: absolute; top: 343px; left: 168px; border:1px solid #160305; border-radius: 5px 5px 75px 75px/5px 5px 65px 55px; transform:rotate(4deg); overflow: hidden;}
+.mouth_out{width: 150px; height: 22px; border-bottom:1px solid #160305; background: #edb15b; position: absolute; left: 180px; top:331px; border-radius: 0 0 110px 110px/0 0 18px 18px; transform:rotate(4deg); }
+.tooth{background: #fff; border: 1px solid #160305;position: absolute; }
+.tooth01{width: 70px; height: 70px;  border-radius: 50%; left: -48px; top:-26px; z-index: 1;}
+.tooth02{width: 50px; height: 40px;  border-radius:0 0 50% 50%; left: 5px; top:-12px; z-index: 2;}
+.tooth03{width: 70px; height: 50px;  border-radius: 50%; right:-20px; top:-20px;}
+.tooth04{width: 42px; height: 50px;  border-radius:0 0 8px 12px/0 0 8px 15px; transform:rotate(3deg); left: 38px; top:-22px; z-index: 3;}
+.tooth05{width: 52px; height: 50px;  border-radius:0 0 20px 35px/0 0 30px 10px; transform:rotate(-10deg); left: 80px; top:-22px; z-index: 3;}
+.tooth06{width: 44px; height: 50px;  border-radius:18px 15px 0 0; transform:rotate(4deg); left: 46px;  bottom:-34px;}
+.tooth07{width: 50px; height: 50px;  border-radius:20px 20px 0 0; transform:rotate(8deg); left: 94px; bottom:-42px;}
+.clothes{width: 226px; height: 0; border-bottom: 120px solid #1c7dc1; border-left: 5px solid #edb15b; border-right:2px solid #edb15b; position: absolute; left: 130px; top: 412px;}
+.clothes:after{content: " "; width: 233px;; border-bottom: 10px solid #1c7dc1; position: absolute; left: -5px; bottom: -125px; z-index: 1; }
+.clothes_r_t{width: 30px; height: 10px; border-top:2px solid #160305; border-right:2px solid #160305; position: absolute; top:-2px; right: 0;}
+.bellyband{ width: 80px; height: 70px; border: 6px dotted #fff; border-radius: 0 0 40% 40%; transform:rotate(-2deg); position: absolute;; left: 60px; top: 50px; z-index: 2; }
+.icon{width: 50px; height: 55px; background: #1f1d10; border-radius:50% 40% 40% 45%; transform:rotate(5deg); position: absolute;; top:4px; left: 13px;}
+.icon .trigon{width:0;height: 0; border:22px solid #1783c3; border-left:20px solid transparent; border-top:24px solid transparent; border-right:20px solid transparent; transform:rotate(-4deg); position: absolute; top: -20px; left: 3px; }
+.icon .trigon:after{ content: " "; width:0; height: 0; border:24px solid #1783c3; border-left: 20px solid transparent; border-right: 20px solid transparent; border-bottom: 20px solid transparent; position: absolute; top: 21px; left: -20px;}
+.icon .round{ width:15px; height: 15px; background: #1f1d10; border-radius: 50%; position: absolute; top:17px; left: 17px;}
+.icon .line01{width: 20px; height: 5px; background: #1f1d10; position: absolute; left: 2px; top: 20px;}
+.icon .line02{width: 24px; border-top: 10px solid transparent; border-bottom: 5px solid #1783c3; border-radius: 0 0 50% 0; position: absolute; left: 0px; top: 14px;}
+.icon .line02:after{content: " "; width:5px ; height: 5px; background: #1783c3; transform:rotate(-40deg); position: absolute; left: -2px; bottom: -7px;}
+.clothes_top_out{width:110px;height: 5px; background: #efb061; position: absolute; left: 135px;top:410px;}
+.clothes_top{width: 226px; height: 9px; border-bottom:2px solid #160305; background: #edb15b; border-radius: 0 0 100px 126px/0 0 5px 10px; transform:rotate(-2deg); position: absolute; left: 135px;top: 411px;}
+.clothes_top:after{content: " "; width: 216px; height: 10px; border-bottom: 7px dotted #fff; border-radius: 0 0 110px 110px/0 0 15px 8px; transform:rotate(1deg); position: absolute; top: 5px; left: 5px}
+.take_left{width:68px; height: 10px; background: #1c7dc1;  border:1px solid #160305; border-right: 0; border-bottom: transparent; border-radius: 0 0 0 40px/0 0 0 30px; transform:rotate(46deg); position:absolute; top:398px; left: 75px;z-index: 2;}
+.take_left:after{content: " "; width: 90px; height: 14px; border-bottom: 1px solid #160305; background: #1c7dc1;border-radius: 0 0 40px 40px /0 0 14px 8px; transform:rotate(13deg); position: absolute; left: 3px; bottom: -14px;}
+.take_left .dot{width:82px; height: 10px; border-bottom:6px dotted  #fff; border-radius: 0 0 50% 50%; position: absolute; left: 0; top: -7px; z-index: 3}
+.take_left .dot:after{content: " "; width: 20px;height: 18px;border:5px dotted #fff;  border-left: transparent; transform:rotate(-14deg); position: absolute; right:-22px; bottom: -22px;}
+.take_left_out{width:23px; height: 18px; background: #1c7dc1; transform:rotate(20deg); position:absolute; left: 116px; top: 425px; z-index: 1;}
+.while_dot_out{width:9px; height: 5px; background: #1c7dc1; border-bottom: 1px solid #160305; border-radius:0 0 10% 10%; transform:rotate(35deg); position: absolute; left: 126px; top:450px; z-index: 999;}
+.button_left{ width:14px; height: 14px; background: #23190f; border-radius: 50%; position: absolute; left: 136px; top: 441px;}
+.button_left:after,.button_right:after{content: " "; width: 9px; border-top: 2px solid #fff; transform:rotate(-45deg); position: absolute; left: 3px; top: 6px;}
+.boutt_line{width: 9px; border-top: 2px solid #fff; transform:rotate(45deg); position: absolute; left: 3px; top: 6px;}
+.take_right{width:68px; height: 24px; background: #1c7dc1; border:1px solid #160305; border-left: 0; border-radius: 0 10px 4px 0/0 8px 12px 0; transform:rotate(-7deg); position: absolute; top:419px; left: 360px;}
+.take_right:after{content: " "; width: 96%; height:0; border-top:5px dotted #fff; position: absolute; top: 3px; left: 0;}
+.button_right_out{width:20px; height: 18px; border: 5px dotted #fff; border-right: 0; transform:rotate(-8deg); position: absolute; left: 332px; top: 429px;}
+.button_right_out:after{content: " "; width:23px; height: 6px; background: #1c7dc1; position: absolute; top: -15px; left: 0;}
+.button_right{width:14px; height: 14px; background: #23190f; border-radius: 50%; position: absolute; left: 3px; top: 2px;}
+.pants{width: 354px;height: 120px; background: #1c7dc1; border:1px solid #160305; border-radius: 5px 5px 120px 120px/5px 5px 100px 120px; transform:rotate(-1deg); position: absolute; top:530px; left: 80px;}
+.dot_left{ width: 98px; height: 50px; border:5px dotted #fff; border-radius: 0 0 50% 50%/0 0 50% 50%; transform:rotate(-5deg); position: absolute; left: -58px; top: 12px;}
+.dot_conter{ width: 20px; height: 62px; border-left: 5px dotted #fff; border-radius: 20% 0 0 40%/50% 0 0 50%; position: absolute; left: 170px; bottom: -12px; transform:rotate(-18deg);}
+.dot_right{ width: 40px; height: 52px; border-left: 5px dotted #fff; border-radius: 20% 0 0 50%/50% 0 0 50%; position: absolute; left: 290px; bottom: 55px; transform:rotate(-24deg);}
+.pants_left_hk{ width: 10px; height: 12px ; background: #1c7dc1; border-left: 1px solid #160305;border-radius: 50% 0 0 50%; transform:rotate(-20deg); position: absolute; top: 554px; left: 78px; }
+.pants_right{width: 24px; height: 54px; background: #1c7dc1; border-top:1px solid #160305; border-right: 1px solid #160305; border-radius: 0 0 28% 0/0 0 50% 0;position: absolute; right:75px; top: 527px; z-index: 999;}
+.pants_left{width: 0; height: 0; border-left: 28px solid transparent; border-right:20px solid transparent; border-top: 78px solid transparent; border-bottom: 82px solid #1c7dc1; transform:rotate(-14deg); position: absolute; top: 380px; left: 106px; z-index: 3;}
+.body_left{width:55px; height: 98px; background: #edb15b; border-left: 1px solid #160305; border-bottom: 1px solid #160305; border-radius: 5px 0 0 10px/38px 0 0 50px; transform:rotate(-6deg); position: absolute; left: 70px; top: 442px;}
+.arm_left{width:31px; height: 231px; background: #edb15b; border: 1px solid #160305; border-bottom: 0; border-radius: 5px 2px 0 8px/80px 30px 0 70px; transform:rotate(-5deg); position: absolute; left: 51px; top:220px;}
+.arm_left:after{content: " "; width: 5px; height: 55px; background:#edb15b; position: absolute;; right: -4px; bottom: 0; z-index: 2;}
+.hand_left{ width: 30px; height: 50px; background: #591910; position: absolute; left: 45px; top: 170px;}
+.hand_left:after{content: " "; width: 30px; height: 10px; background: #591910; border-bottom: 1px solid #160305; border-radius: 0 0 20% 30%; position: absolute; left: 0; bottom: -5px;}
+.hand01{width:0; height: 0;  border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 30px solid transparent; border-bottom: 30px solid #591910;border-radius: 0 0 0 10%; position: absolute;; top:164px; left: 38px;}
+.hand02{width:0; height: 0;  border-left: 10px solid transparent; border-right: 8px solid transparent; border-top: 38px solid transparent; border-bottom: 38px solid #591910; border-radius: 0 0 30% 0; transform:rotate(-1deg); position: absolute;; top:148px; left: 66px;}
+.hand02:after{content: " "; width: 15px; height: 30px; background: #591910; border-right: 2px solid #160305; border-radius: 20% 50% 20% 0; transform:rotate(10deg);  position: absolute; top: -18px; left: -9px;}
+.hand02_hk{ width: 2px ;height: 16px; border: 2px solid #160305; border-right: 0; border-bottom: 0; border-radius: 46% 0 0 0; transform:rotate(-13deg); position: absolute; left: 3px; top: 11px; z-index: 3;}
+.hand03{width:23px; height: 56px; background: #591910; border: 2px solid #160305; border-bottom: 0; border-radius: 35% 40% 0 20%/30% 30% 0 50%; transform:rotate(6deg); position: absolute; top:112px; left: 52px;}
+.hand04{ width: 45px; height: 30px; background: #591910; border:2px solid #160305;border-right: 0; border-radius: 30% 50% 40% 40%/40% 20% 20% 50%; transform:rotate(22deg); position: absolute;; top: 154px; left: 20px;}
+.hand04:after{content: " "; width:25px; height: 10px; border-bottom: 1px solid #160305; transform:rotate(38deg); position: absolute; left: 18px; bottom: -9px; background: #591910; z-index: 3;}
+.hand04_hk{width: 12px; height: 5px; background: #591910; position: absolute; left: 24px; top: -3px;}
+.hand05{ width: 30px; height: 28px; background: #591910; border:1px solid #160305;border-right: 0; border-radius: 46% 50% 48% 40%/40% 50% 48% 46%; position: absolute;; top: 164px; left: 36px;}
+.hand05:after{content: " "; width: 10px; height: 35px; background: #591910; position: absolute; left: 24px; top: -3px;}
+.hand_right{width: 86px; height: 70px; background: #edb15b; border-top:1px solid #160305; border-right:1px solid #160305; border-radius: 0 45% 25% 0/0 45% 25% 0; transform:rotate(30deg); position: absolute; top: 458px; left: 403px; }
+.hand_right:after{content: " "; width:14px; height: 12px; transform:rotate(48deg); position: absolute; top:3px; left: -8px; background: #edb15b;}
+.hand_right_top{ width: 4px;  border-bottom:1px solid #160305; border-radius: 0 0 50% 50%;  background: #160305; position: absolute; left: -1px; top: -2px;}
+.hand_right_white{width:50px; height: 60px; background: #fff; border-left: 1px solid #160305; border-top: 1px solid #160305; border-radius: 40% 50% 0 0/40% 35% 0 0;  position: absolute; right:40px; top: 490px; z-index: 4;}
+.hand_right_white:after{ content: " "; width: 41px; height: 25px; border-top: 1px solid #160305; border-bottom: 1px solid #160305; transform:rotate(-44deg); background: #edb15b; border-radius: 50% 50% 0 50%/50% 10% 0 50%; position: absolute; right: -8px; top: 15px;}
+.finger{ width: 30px; height: 40px; background: #591910; border-radius: 30% 50% 40% 10%; position: absolute; right: 50px; top: 545px; z-index: 4;}
+.finger:after{content: " "; width: 20px ; height: 10px; background: #fff; border-radius: 50% 50% 0 0/30% 20% 0 0; position: absolute;right: 10px; bottom: -8px; transform:rotate(20deg);}
+.wrist{width: 0; height: 36px ; border-top: 2px solid transparent; border-bottom: 2px solid transparent; border-left: 20px solid transparent; border-right: 24px solid #591910; transform:rotate(-40deg); position: absolute;right: 16px; bottom: -8px; z-index: 2;}
+.hand_right_hk{width:60px; height: 20px; background: #edb15b; border-bottom: 19px solid #edb15b; border-radius: 0 0 50% 50%/0 0 30% 10%; transform:rotate(-36deg); position: absolute; right: 20px; top: 489px; z-index: 2;}
+.hand_right_hk:after{content: " "; width: 100%; height: 40px; border-bottom: 1px solid #160305; border-radius: 0 0 50% 50%/0 0 30% 10%; position: absolute; bottom: -19px;}
+.white_hk{ width:60px; height: 20px; background: #fff; border-bottom: 19px solid #fff; border-radius: 0 0 50% 50%/0 0 30% 10%; transform:rotate(-36deg); position: absolute; right: 6px; top: 510px; z-index: 1; }
+.legs_bg{width: 170px; height: 0; border-left: 10px solid transparent; border-right: 6px solid transparent; border-top: 40px solid #1c7dc1; border-bottom: 40px solid transparent; position: absolute; left: 168px; bottom: 20px;}
+.legs_bg:after{content: " "; width: 33px; height: 46px; background: #1c7dc1; border-right: 1px solid #160305; transform:rotate(10deg); position: absolute; top:-48px; right: -3px;}
+.legs_bg_left{width: 6px; height: 43px; background: #1c7dc1; transform:rotate(-13deg); border-left: 1px solid #160305;  position: absolute; left: -7px; top: -43px;}
+.legs_bg_bottom{width: 100%; height: 0; border-top: 1px solid #160305; position: absolute; left: -2px; bottom: -1px;}
+.legs_bg_center{width:38px; height: 50px; background: #fff; border:1px solid #160305; border-bottom: 0; border-radius: 40% 50% 0 0/ 20% 16% 0 0; position: absolute; left: 64px; top:-35px;}
+.foot_left{width:88px; height: 34px; background: #222; border-radius: 40% 0 0 5%/50% 0 0 30%; position: absolute; left: 149px; bottom: 26px;}
+.foot_left_hk{width:0; height: 20px; border-left: 7px solid transparent; border-right: 7px solid #fff; border-top: 3px solid transparent; border-bottom: 3px solid transparent; position: absolute; right: -6px; top: -2px;}
+.foot_left_hk:after{content: " "; width: 8px; height: 0; border-top: 1px solid #160305; transform:rotate(-26deg); position: absolute; right: -7px; top: -3px;}
+.foot_left_bottom{width: 31px; height: 0; border-left: 1px solid transparent; border-top: 2px solid transparent; border-bottom: 4px solid #fff;  transform:rotate(1deg); position: absolute; right: 0; bottom: -2px;}
+.foot_left_bottom:after{content: " "; width: 7px; height: 9px; background: #222; border-radius: 50%; position: absolute; top: -10px; right: -1px;}
+.foot_right{width:94px; height: 34px; background: #222; border-radius: 0 40% 5% 0/0 50% 30% 0; position: absolute; left: 281px; bottom: 26px;}
+.foot_right:after{content: " "; width: 38px; height: 8px; background: #fff; tranform:rotate(-20deg 0); border-radius: 0 50% 0 0; position: absolute; left: 0; bottom: -5px;}
+.foot_right_hk{width:6px; height: 32px; border-top: 1px solid #160305; border-radius: 0 50% 0 0/0 50% 0 0; transform:rotate(10deg); background: #fff; position: absolute; left: -3px; top: -4px;}
+.foot_right_hk:after{content: " "; width: 3px; height: 13px; border-radius: 0 40% 0 0/0 50% 0 0; transform:rotate(3deg); background: #fff; position: absolute; right: -2px; top: 18px;} 
+.foot_right_bottom{width: 8px ; height: 8px; background: #fff; position: absolute; left: 0px; bottom: 0px; }
+.foot_right_bottom:after{content: " "; width: 8px ;height: 8px; background: #222; border-radius: 50%; position: absolute; left: 3px; top: -3px;}
+</style>
+</head>
+
+<body>
+	<div class="main">
+        <div class="name"><p>zouyingtang</p><p>2015.11.8</p></div>
+        <div class="hair01"></div>
+        <div class="hair02"></div>
+        <div class="hair03"></div>
+        <div class="hair04"></div>
+        <div class="hair05"></div>
+        <div class="hair06"></div>
+        <div class="hair07"></div>
+        <div class="hair08"></div>
+        <div class="hair09"></div>
+        <div class="hair10"></div>
+        <div class="hair11"></div>
+        <div class="hair12"></div>
+        <div class="hair13"></div>
+        <div class="hair14"></div>
+        <div class="hair15"></div>
+        <div class="hair16"></div>
+        <div class="hair17"></div>
+		<div class="body"></div>
+        <div class="frame_left"></div>
+        <div class="frame_right_top"></div>
+        <div class="frame_right_bottom"></div>
+        <div class="left_outline">
+             <div class="eye_left">
+        	     <div class="inline">
+        	     	<div class="eye_white">
+        	     		<div class="eyeball"></div>
+        	     	</div>
+        	     </div>
+             </div>
+        </div>
+        <div class="right_outline">
+             <div class="eye_right">
+        	     <div class="inline">
+        	     	<div class="eye_white">
+        	     		<div class="eyeball"></div>
+        	     	</div>
+        	     </div>
+             </div>
+        </div>
+        <div class="eye_frame_shade"></div>
+        <div class="eye_frame_shade2"></div>
+        <div class="side"></div>
+        <div class="mouth">
+            <div class="tooth tooth01"></div>
+            <div class="tooth tooth02"></div>
+            <div class="tooth tooth03"></div>
+            <div class="tooth tooth04"></div>
+            <div class="tooth tooth05"></div>
+            <div class="tooth tooth06"></div>
+            <div class="tooth tooth07"></div>
+        </div>
+        <div class="mouth_out"></div>
+        <div class="clothes">
+            <div class="clothes_r_t"></div>
+            <div class="bellyband">
+                <div class="icon">
+                    <div class="trigon"></div>
+                    <div class="round"></div>
+                    <div class="line01"></div>
+                    <div class="line02"></div>
+                </div>
+            </div>
+        </div>
+        <div class="clothes_top"></div>
+        <div class="clothes_top_out"></div>
+        <div class="take_left">
+            <div class="dot"></div>
+        </div>
+        <div class="while_dot_out"></div>
+        <div class="button_left">
+            <div class="boutt_line"></div>
+        </div>
+        <div class="take_left_out"></div>
+        <div class="take_right"></div>
+        <div class="button_right_out">
+            <div class="button_right">
+                <div class="boutt_line"></div>
+            </div>
+        </div>
+        <div class="pants">
+            <div class="dot_left"></div>
+            <div class="dot_conter"></div>
+            <div class="dot_right"></div>
+        </div>
+        <div class="pants_left_hk"></div>
+        <div class="pants_right"></div>
+        <div class="pants_left"></div>
+        <div class="body_left"></div>
+        <div class="arm_left"></div>
+        <div class="hand_left"></div>
+        <div class="hand01"></div>
+        <div class="hand02">
+            <div class="hand02_hk"></div>
+        </div>
+        <div class="hand03"></div>
+        <div class="hand04">
+            <div class="hand04_hk"></div>
+        </div>
+        <div class="hand05"></div>
+        <div class="hand_right">
+            <div class="hand_right_top"></div>   
+        </div> 
+        <div class="hand_right_white">
+            <div class="wrist"></div>
+        </div>
+        <div class="finger"></div>
+        <div class="hand_right_hk">
+        </div>
+        <div class="white_hk"></div>
+        <div class="legs_bg">
+            <div class="legs_bg_left"></div>
+            <div class="legs_bg_bottom"></div>
+            <div class="legs_bg_center"></div>
+        </div>
+        <div class="foot_left">
+            <div class="foot_left_hk"></div>
+            <div class="foot_left_bottom"></div>
+        </div>
+        <div class="foot_right">
+            <div class="foot_right_hk"></div>
+            <div class="foot_right_bottom"></div>
+        </div>
+	</div>
+</body>
+</html>
